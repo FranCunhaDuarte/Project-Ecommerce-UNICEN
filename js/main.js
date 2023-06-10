@@ -67,24 +67,42 @@ function hideForm(){
 let addName=document.querySelector('#name');
 let addPrice=document.querySelector('#price');
 let addCondition=document.querySelector('#condition');
-let makeJson=false;
-let tabla={
-    'nombre': addName,
-    'precio': addPrice,
-    'condicion': addCondition
-}
+let printError=document.querySelector('.error-condition');
+let table=[{
+    'nombre':addName.value,
+    'precio':addPrice.value,
+    'condicion':addCondition.value
+}];
 
-let addForm=document.querySelector('.addTable--button').addEventListener('click',function(){
-    addName.value;
-    addPrice.value;
-    addCondition.value;
-    let condition=addCondition.toLowerCase();
-    if(condition=="nuevo"||condition="usado"){
-        
+let addForm = document.querySelector('.addTable--button').addEventListener('click', function() {
+    let names = addName.value;
+    let price = addPrice.value;
+    let condition = addCondition.value;
+    let conditionToLowerCase = condition.toLowerCase();
+    if (conditionToLowerCase == "nuevo" || conditionToLowerCase == "usado") {
+        printError.innerHTML = "";
+        table = {
+            'nombre': names,
+            'precio': price,
+            'condicion': conditionToLowerCase
+        };
+        let upgradeButton=document.querySelector('.addTable--button');
+        upgradeButton.innerHTML="Editar";
+        upgradeTable();
+    } else if (conditionToLowerCase == "") {
+        printError.innerHTML = "";
+        printError.innerHTML = "Debe ingresar un valor para poder continuar.";
+    } else {
+        printError.innerHTML = "";
+        printError.innerHTML = "El valor ingresado está mal escrito o no es válido.";
     }
-    tabla.nombre=addName;
-    tabla.precio=addPrice;
-    tabla.condition=addCondition;
-    console.log(tabla.nombre)
 });
 
+function upgradeTable(){
+    let nameTable=document.querySelector('.nameInTable');
+    nameTable.innerHTML=table.nombre;
+    let priceTable=document.querySelector('.priceInTable');
+    priceTable.innerHTML=table.precio;
+    let conditionTable=document.querySelector('.conditionInTable');
+    conditionTable.innerHTML=table.condicion;
+}

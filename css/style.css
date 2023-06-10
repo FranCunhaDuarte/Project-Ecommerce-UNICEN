@@ -34,6 +34,7 @@ body{
     display: grid;
     justify-items: center;
     grid-template-rows: 50px 1fr;
+    margin: 20px 0 30px 0;
 }
 .grid-footer{
     grid-area: footer;
@@ -134,7 +135,6 @@ body{
 #addTable{
     width: 80%;
     height: 40px;
-    margin: 20px 0 0px 0;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     border: none;
@@ -202,6 +202,11 @@ body{
     flex-direction: column;
 }
 
+.error-condition{
+    color: rgb(255, 4, 4);
+    font-size: 13px;
+}
+
 #file{
     width: 100%;
 }
@@ -239,6 +244,11 @@ table tr td{
 .img-table-container img{
     width: 200px;
 }
+
+.conditionInTable{
+    text-transform: capitalize;
+}
+
 
 
 
