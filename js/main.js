@@ -64,20 +64,27 @@ function hideForm(){
     addTable.classList.toggle("hide-table");
 }
 
+let addName=document.querySelector('#name');
+let addPrice=document.querySelector('#price');
+let addCondition=document.querySelector('#condition');
+let makeJson=false;
+let tabla={
+    'nombre': addName,
+    'precio': addPrice,
+    'condicion': addCondition
+}
+
 let addForm=document.querySelector('.addTable--button').addEventListener('click',function(){
-    let addName=document.querySelector('#name').value;
-    let addPrice=document.querySelector('#price').value;
-    let printName=document.querySelector('.nameInTable');
-    printName.innerHTML=addName;
-    let printPrice=document.querySelector('.priceInTable');
-    printPrice.innerHTML="$"+addPrice;
-    let addCondition=document.querySelector('.condition-select--op');
-    if(addCondition!="usado"||addCondition!="nuevo"){
-        alert("nazi");
+    addName.value;
+    addPrice.value;
+    addCondition.value;
+    let condition=addCondition.toLowerCase();
+    if(condition=="nuevo"||condition="usado"){
+        
     }
-    let formData = {
-        "nombre": addName,
-        "precio": addPrice,
-        "estado": optionSelect
-    };
+    tabla.nombre=addName;
+    tabla.precio=addPrice;
+    tabla.condition=addCondition;
+    console.log(tabla.nombre)
 });
+
