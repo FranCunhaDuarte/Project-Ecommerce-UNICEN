@@ -106,3 +106,24 @@ function upgradeTable(){
     let conditionTable=document.querySelector('.conditionInTable');
     conditionTable.innerHTML=table.condicion;
 }
+
+let addRow=document.querySelector('.addRow').addEventListener('click',function(){
+    let table=document.querySelector('.table');
+    let row=document.createElement('tr');
+    let inputName=document.querySelector('.name-input-addTable');
+    let inputAtribute=document.querySelector('.atribute-input-addTable');
+    
+    let leftColumn=document.createElement('td');
+    leftColumn.textContent="ASDS";
+    row.appendChild(leftColumn);
+    let rightColumn=document.createElement('td');
+    rightColumn.textContent="ASDS";
+    row.appendChild(rightColumn);
+    table.appendChild(row);
+});
+
+let delRow = document.querySelector('.delRow').addEventListener('click', function() {
+    let table = document.querySelector('.table');
+    let rows = table.getElementsByTagName('tr');
+        table.removeChild(rows[rows.length - 1]);
+});

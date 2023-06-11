@@ -249,7 +249,68 @@ table tr td{
     text-transform: capitalize;
 }
 
+.add-delet--table{
+    width: 250px;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 100px 100px;
+    gap: 5px;
+    grid-column: 100px;
+    justify-content: space-between;
+}
 
+.addRow{
+    background-color: rgb(73, 206, 73);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
+}
+
+.delRow{
+    background-color: rgb(230, 64, 64);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
+}
+
+.fa-plus-table{
+    color: #ffffff;
+}
+
+.fa-minus{
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.container-add-table-row{
+    width: 100%;
+    margin-top: 20px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-table-row{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px -17px rgba(0,0,0,0.75);
+    height: 130px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.add-table-row input{
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(88, 198, 139);
+    padding-left: 5px;
+}
 
 
 /*       F O O T E R        */
