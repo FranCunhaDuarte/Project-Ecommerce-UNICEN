@@ -21,6 +21,11 @@
         </div>
     </header>
     <nav class="grid-nav nav-bar">
+        <ul class="nav-list-main">
+            <li><a href="./index.html" class="index-home">Inicio</a></li>
+            <li><a href="./products.html" class="index-products nav-text">Productos</a></li>
+            <li><a href="./contact.html" class="index-contact nav-text">Contacto</a></li>
+        </ul>
         <i class="fa-solid fa-bars button-var"></i>
         <ul class="nav-list hide-menu">
             <li><a href="./index.html" class="index-home">Inicio</a></li>
@@ -37,37 +42,18 @@
                     <input type="number" id="price" placeholder="Precio">
                     <input type="text" id="condition" placeholder="Estado:    Ej.(Nuevo - Usado)">
                     <p class="error-condition"></p>
-                    <input type="file" id="file">
-                    <button class="addTable--button">Añadir</button>
+                    <div class="buttons-container">
+                        <button class="addTable--button">Añadir</button>
+                        <button class="addTablex3--button">Añadir x3</button>
+                        <button class="deletLastItemTable--button">Borrar ultimo</button>
+                        <button class="emptyTable--button">Vaciar</button>
+                    </div>
                 </div>
             </div>
         </div>
         <table class="table">
-            <tr>
-                <td colspan="2" class="img-table-container"><img src="./img/pc-gamer.webp" alt="" class="img-computer"></td>
-            </tr>
-            <tr>
-                <td class="nameInTable" colspan="2"></td>
-            </tr>
-            <tr>
-                <td class="priceLabel">Precio</td>
-                <td class="priceInTable"></td>
-            </tr>
-            <tr>
-                <td class="conditionLabel">Estado</td>
-                <td class="conditionInTable"></td>
-            </tr>
+            <tr></tr>
         </table>
-        <div class="add-delet--table">
-            <button class="addRow"><i class="fa-solid fa-plus fa-plus-table"></i></button>
-            <button class="delRow"><i class="fa-solid fa-minus fa-minus-table"></i></button>
-        </div>
-        <div class="container-add-table-row">
-            <div class="add-table-row">
-                <input type="text" id="name-input-addTable" placeholder="Nombre de atributo">
-                <input type="text" id="atribute-input-addTable" placeholder="Atributo">
-            </div>
-        </div>
     </main>
     <footer class="grid-footer">
         <div class="social-media">

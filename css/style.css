@@ -188,7 +188,7 @@ body{
     border-bottom: 1px solid rgb(88, 198, 139);
 }
 
-.addTable--button{
+.addTable--button,.addTablex3--button,.deletLastItemTable--button,.emptyTable--button{
     width: 70px;
     height: 30px;
     border-radius: 20px;
@@ -249,68 +249,6 @@ table tr td{
     text-transform: capitalize;
 }
 
-.add-delet--table{
-    width: 250px;
-    display: grid;
-    margin-top: 20px;
-    grid-template-columns: 100px 100px;
-    gap: 5px;
-    grid-column: 100px;
-    justify-content: space-between;
-}
-
-.addRow{
-    background-color: rgb(73, 206, 73);
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
-}
-
-.delRow{
-    background-color: rgb(230, 64, 64);
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 47px -17px rgba(0,0,0,0.75);
-}
-
-.fa-plus-table{
-    color: #ffffff;
-}
-
-.fa-minus{
-    color: #ffffff;
-    font-size: 40px;
-}
-
-.container-add-table-row{
-    width: 100%;
-    margin-top: 20px;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add-table-row{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 30px -17px rgba(0,0,0,0.75);
-    height: 130px;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 20px;
-}
-
-.add-table-row input{
-    width: 80%;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid rgb(88, 198, 139);
-    padding-left: 5px;
-}
 
 
 /*       F O O T E R        */
@@ -350,7 +288,19 @@ table tr td{
 .contact ul li{
     display: grid;
     grid-template-columns: 30px 1fr;
-    
+}
+
+.table{
+    width: 300px;
+}
+
+.table img{
+    width: 200px;
+}
+
+table tbody tr .space-table{
+    margin: 0 0 20px 0;
+    border-bottom: 7px solid rgb(219, 219, 219);
 }
 
 
@@ -473,3 +423,75 @@ table tr td{
     font-size: 18px;
 }
 
+.nav-list-main{
+    display: none;
+}
+
+
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 120px 45px auto 200px;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+        height: 100vh;
+    }
+    .grid-main-contact{
+        grid-column: 2;
+    }
+    nav .fa-bars{
+        display: none;
+    }
+    
+    #addTable{
+        width: 500px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        box-shadow: 0px 0px 25px -8px rgba(0,0,0,0.76);
+    }
+    .addTable-container{
+        width: 500px;
+    }
+    .search-bar{
+        width: 500px;
+    }
+    .nav-list-main{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        list-style-type: none;
+        gap: 100px;
+        align-items: center;
+        height: 100%;
+    }
+    .buttons-container{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-list-main a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition: color .4s;
+    }
+    .nav-list-main a:hover{
+        color: black;
+    }
+    .contact-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        height: 100%;
+        padding: 0px 0 30px 0;
+    }
+  }
